@@ -21,7 +21,12 @@
 		<link rel="stylesheet" href="https://backupparachute.com/css/tools.css">
 
 		<style media="screen">
-
+			.mt-n1 {
+				margin-top: -0.25rem !important;
+			}
+			.mt-n2 {
+				margin-top: -0.5rem !important;
+			}
 		</style>
 	</head>
 	<body class="calc-body">
@@ -52,12 +57,21 @@
 
 						<div class="form-group mb-3 mt-3">
 							<label for="start">Start</label>
-							<input class="form-control" type="text" name="start" value="" id="start">
+							<input class="form-control" type="text" name="start" value="" id="start" placeholder="HH:MM:SS">
+						</div>
+						<div class="form-group mb-3 mt-3">
+							<label for="finish">Splits <a href="#" onclick="addSplit()"> <i class="bi bi-plus-square" title="Add Split"></i></a></label>
+							<!-- <input class="form-control" type="finish" name="finish" value="" id="finish"> -->
+							<!-- <pre id="auth_header"></pre> -->
+							<div id="splits">
+							</div>
 						</div>
 						<div class="form-group mb-3 mt-3">
 							<label for="finish">Finish</label>
-							<input class="form-control" type="finish" name="finish" value="" id="finish">
+							<input class="form-control" type="finish" name="finish" value="" id="finish" placeholder="HH:MM:SS">
 						</div>
+
+						<small class="fw-lighter fst-italic">accepted formats: [HH:MM:SS or YYYY-MM-DD HH:MM:SS]</small>
 
 					  </div>
 					</div>
@@ -70,6 +84,17 @@
 
 							<!-- <pre id="auth_header"></pre> -->
 							<input class="form-control" type="text" name="difference" value="" id="difference" readonly>
+
+						</div>
+					</div>
+
+					<div class="card mb-3" style="--bs-bg-opacity: .7;display: none;" id="legs-card">
+						<div class="card-body">
+							<!-- <h5 class="card-title">Legs</h5> -->
+							<label for="finish">Legs</label>
+							<div id="legs">
+
+							</div>
 
 						</div>
 					</div>
